@@ -34,11 +34,14 @@
 
 header {
   background-color: red;
-  height: 4rem;
+  height: 3.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 nav {
@@ -134,8 +137,44 @@ button {
   color: white;
 }
 
+.menu-flex-container {
+  margin: 2rem;
+  display:flex;
+  justify-content: center;
+}
+
+.menu-container {
+  width: clamp(5rem, 100%, 50rem)
+}
+
+.section-title {
+  font-size: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 7rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-bottom: solid black 1px;
+}
+
 .info div {
   height: 2rem;
+}
+
+.menu-item .title {
+  font-size: 1.75rem;
+}
+
+.menu-item .description {
+  font-size: 1.2rem;
+}
+
+.menu-section {
+  margin-bottom: 2rem;
 }
 
 

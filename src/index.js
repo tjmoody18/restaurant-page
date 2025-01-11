@@ -4,9 +4,10 @@ import loadMenuTab from "./menu.js"
 import loadContactTab from "./contact.js"
 
 console.log("test")
-loadHomeTab()
+
 
 const content = document.getElementById("content")
+loadHomeTab()
 
 const homeButton = document.querySelector(".home")
 const menuButton = document.querySelector(".menu")
