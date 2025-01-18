@@ -2,7 +2,7 @@
 import headerImageSrc from "./assets/imgs/header-home.jpg"
 import ownerImageSrc from "./assets/imgs/gus_fring.jpg"
 
-export default function() {
+export default function () {
   const text = document.createElement("div")
   text.className = "text rubik-subheading"
   text.textContent = "Los Pollos Hermanos"
@@ -30,15 +30,36 @@ export default function() {
   const ownerImageElem = document.createElement("img")
   ownerImageElem.src = ownerImageSrc;
 
+  const ownerFlexContainer = document.createElement("div")
+  ownerFlexContainer.className = "owner-flex-container"
+
   const ownerImgContainer = document.createElement("div")
   ownerImgContainer.className = "owner-img"
+
+  const aboutText = document.createElement("div")
+  aboutText.className = "about-text rubik-subheading"
+  aboutText.textContent = "Gus Fring - Owner and Proprieter"
+
+  const descriptionContainer = document.createElement("div")
+  descriptionContainer.className = "description-container"
+
+  const ownerDescription = document.createElement("div")
+  ownerDescription.className = "owner-description rubik-body"
+  ownerDescription.textContent = `Gus Fring, owner of Los Pollos Hermanos, is a dedicated entrepreneur
+          known for his commitment to quality and community. Originally from
+          Chile, Gus built the restaurant into a beloved destination through hard
+          work, attention to detail, and a passion for exceptional service. He
+          invites you to experience the warm, family-friendly atmosphere and
+          signature flavors that make Los Pollos Hermanos special.`
+
+
 
   overlayText.appendChild(text)
   overlayText.appendChild(subtext)
   overlayText.appendChild(description)
 
   overlay.appendChild(overlayText)
-  
+
 
   imgContainer.appendChild(headerImageElem)
   imgContainer.appendChild(overlay)
@@ -47,7 +68,14 @@ export default function() {
 
   const content = document.getElementById("content")
   content.appendChild(imgContainer)
-  content.appendChild(ownerImgContainer)
+
+  ownerFlexContainer.appendChild(ownerImgContainer)
+  ownerFlexContainer.appendChild(aboutText)
+
+  descriptionContainer.appendChild(ownerDescription)
+
+  content.appendChild(ownerFlexContainer)
+  content.appendChild(descriptionContainer)
 }
 
 

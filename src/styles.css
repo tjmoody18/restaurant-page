@@ -32,6 +32,7 @@
 
 }
 
+
 header {
   background-color: red;
   height: 3.5rem;
@@ -58,6 +59,15 @@ button {
   border-radius: 14px;
 }
 
+#content {
+  margin: 0 10vw;
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .img-container {
   position: relative;
   display: inline-block;
@@ -65,7 +75,7 @@ button {
 
 .img-container img {
   display: block;
-  width: 100vw;
+  width: 80vw;
   height: max(260px, 40vh);
 }
 
@@ -113,7 +123,7 @@ button {
 }
 
 .owner-img img{
-  width: 50vw;
+  width: clamp(1rem, 50vw, 40rem);
   height: auto;
 }
 
@@ -175,6 +185,38 @@ button {
 
 .menu-section {
   margin-bottom: 2rem;
+}
+
+.owner-flex-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.about-text {
+  align-self: center;
+  justify-self: center;
+  font-size: 1.3rem;
+  color: black;
+  text-align: center;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.owner-description {
+  background-color: rgb(255, 0, 0);
+  color:#ffffff;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: 50%;
+  margin: 1rem 4rem;
+  font-size: 1.1rem;
 }
 
 
